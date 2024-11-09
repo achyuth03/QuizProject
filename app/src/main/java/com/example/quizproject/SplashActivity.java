@@ -1,4 +1,3 @@
-// SplashActivity.java
 package com.example.quizproject;
 
 import android.content.Intent;
@@ -9,20 +8,19 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SplashActivity extends AppCompatActivity {
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Delay for 2 seconds (2000 milliseconds) before moving to the next screen
+        // Use a Handler to delay the transition to HomeActivity by 2 seconds
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                // Uncomment this section to navigate to the HomeActivity once it's implemented
-                // Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
-                // startActivity(intent);
-                // finish(); // Close the splash screen so it won't be shown on back press
+                // After 2 seconds, start HomeActivity
+                Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish(); // Close SplashActivity to prevent it from being on the back stack
             }
-        }, 2000); // 2-second delay
+        }, 2000); // 2000 milliseconds = 2 seconds
     }
 }
