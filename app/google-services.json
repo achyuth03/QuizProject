@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "606936241235",
+    "project_id": "quizlist-43eec",
+    "storage_bucket": "quizlist-43eec.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606936241235:android:af2fcf1f6efae42ea3a2a6",
+        "android_client_info": {
+          "package_name": "com.example.quizproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANia-K02HP73TaFDR4QQ58yQGTseG6B0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permissions and other configurations -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,27 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizProject"
         tools:targetApi="31">
-
-        <!-- Splash Activity (Entry point of the app) -->
+        <activity
+            android:name=".setupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false" /> <!-- Splash Activity (Entry point of the app) -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"> <!-- Required for Android 12+ -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- HomeActivity (Main screen of the app) -->
+        </activity> <!-- HomeActivity (Main screen of the app) -->
         <activity
             android:name=".HomeActivity"
             android:exported="true"> <!-- Necessary if you want to navigate here from other parts of the app -->
         </activity>
-
-        <!-- Uncomment and add HistoryActivity when ready -->
-        <!-- <activity android:name=".HistoryActivity"
-            android:exported="true" /> -->
-
     </application>
 
 </manifest>
